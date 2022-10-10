@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+    <h1>Carrtio de compras</h1>
+    <div class="container">
+        
+        
+        <div class="container-table">
+
+            
+
+            <table FRAME="void" RULES="rows" class="table" BORDER WIDTH="50%">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+               
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+       
+
+
+        
+        <div class="container-cards">
+            <div id="cards"></div>
+        </div>
+
+        <template id="template-card">
+
+            <div class="card">
+                <img src="" alt="" class="img">
+                <h4 id="titulo-producto">Titulo</h4>
+               
+                 <p >$ <span id="precio"> </span></p>
+                <button class="btn">Comprar</button>
+            </div>
+
+        </template>
+
+        <template id="template-carrito">
+            
+                <tr>
+                    <th scope="row">id</th>
+                    <td valign="middle">Café</td>
+                    <td>1</td>
+                    <td>
+                        <button class="btn-suma">
+                            +
+                        </button>
+                        <button class="btn-resta">
+                            -
+                        </button>
+                    </td>
+                    <td>$ <span>500</span></td>
+                </tr>
+            
+
+        </template>
+        <template id="template-footer">
+            <th scope="row" colspan="2">Total productos</th>
+            <td>10</td>
+            <td>
+                <button id="vaciar-carrito">
+                    vaciar todo
+                </button>
+            </td>
+            <td class="font-weight-bold">$ <span>5000</span></td>
+        </template>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
