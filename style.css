@@ -63,3 +63,24 @@ th {
   border-radius: 10px;
   border: none;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width:1260px) {
+  .container{
+   
+    flex-direction:column;
+  }
+
+  
+}
+@media screen and (max-width:840px) {
+#cards{
+  grid-template-columns: 1fr 1fr;
+}}
+
+@media screen and (max-width:596px) {
+  #cards{
+    grid-template-columns: 1fr;
+  }}
