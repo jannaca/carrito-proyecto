@@ -13,6 +13,14 @@ const footer = document.getElementById("footer");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   fetchData();
+
+    // Para guardar lo productos en el navegador al recargar:
+    
+  if(localStorage.getItem("carrito")){
+    carrito = JSON.parse(localStorage.getItem("carrito"))
+    pintarCarrito()
+  }
+
 });
 
 items.addEventListener("click", (e) => {
@@ -85,6 +93,10 @@ const pintarCarrito = () => {
   });
   items.appendChild(fragment);
   pintarFooter();
+
+  // Para guardar lo productos en el navegador al recargar:
+
+  localStorage.setItem("carrito", JSON.stringify(carrito))
 };
 
 const pintarFooter = () => {
